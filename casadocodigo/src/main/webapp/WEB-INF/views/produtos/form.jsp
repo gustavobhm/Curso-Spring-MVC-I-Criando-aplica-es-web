@@ -1,25 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="ISO-8859-1"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE html>
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Livros de Java, Android, iPhone, Ruby, PHP e muito mais -
-	Casa do Código</title>
+	Casa do CÃ³digo</title>
 </head>
 <body>
-
+	<h1>Casa do CÃ³digo</h1>
 	<form action="/casadocodigo/produtos" method="post">
 		<div>
-			<label>Título</label> <input type="text" name="titulo" />
+			<label>TÃ­tulo</label> <input type="text" name="titulo" />
 		</div>
 		<div>
-			<label>Descrição</label>
+			<label>DescriÃ§Ã£o</label>
 			<textarea rows="10" cols="20" name="descricao"></textarea>
 		</div>
 		<div>
-			<label>Páginas</label> <input type="text" name="paginas" />
+			<label>PÃ¡ginas</label> <input type="text" name="paginas" />
 		</div>
 		<c:forEach items="${tipos}" var="tipoPreco" varStatus="status">
 			<div>
@@ -28,8 +28,8 @@
 					name="precos[${status.index}].tipo" value="${tipoPreco}" />
 			</div>
 		</c:forEach>
+
 		<button type="submit">Cadastrar</button>
 	</form>
-
 </body>
 </html>
